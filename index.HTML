@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO CLASS TKJ2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f3f3f3;
+            background-position: url('begraund tkj.jpg');
+            background-image: url('begraund tkj1.jpg');
+            background-position: top left;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: rgb(154, 206, 255);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        button {
+            flex: 1;
+            margin: 0 10px;
+            padding: 0px;
+            background-color: #e9e9e9;
+            color: rgb(104, 203, 233);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: none;
+            font-size: 17px
+        }
+        button:hover {
+            background-color: #f1f1f1;
+            transform: translateY(-2px);
+        }
+        .card-container {
+            display: none; /* Awalnya disembunyikan */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(30% - 20px); /* Ukuran kartu */
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #63c0eb;
+            color: white;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: calc(33% - 10px);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function toggleCards(cardType) {
+            const cardContainers = ['siswaCards', 'guruCards', 'piketCards', 'strukturCards', 'gallery', 'jadwalPelajaran', 'kegiatanKelas'];
+
+            // Sembunyikan semua kartu
+            cardContainers.forEach(id => {
+                const container = document.getElementById(id);
+                if (container) {
+                    container.style.display = id === cardType ? "flex" : "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>wellcome to tkj 2</h1>
+
+        <div class="button-container">
+            <button onclick="toggleCards('siswaCards')">Data Siswa</button>
+            <button onclick="toggleCards('guruCards')">Data Guru</button>
+            <button onclick="toggleCards('piketCards')">Piket Kelas</button>
+            <button onclick="toggleCards('strukturCards')">Struktur Kelas</button>
+            <button onclick="toggleCards('gallery')">Galeri Foto</button>
+            <button onclick="toggleCards('jadwalPelajaran')">Jadwal Pelajaran</button>
+        </div>
+
+        <div id="siswaCards" class="card-container">
+            <div class="card">
+                <img src="MOCHAMAD SULTHONI.png" alt="MOCHAMAD SULTHONI">
+                <h3>mochamad sulthoni</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0085748816</P>
+                <p>Alamat: DSN Sriwing,sidomulyo,Kec.bancar</p>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <h3>MOH.DESTA FERNANDA</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0066107525</P>
+                <p>Alamat: JL.Diponegoro 1/51.mengundikara.kec.Nganjuk</p></p>
+            </div>
+            <div class="card">
+                <img src="MOH WINDY AGYSTIAN.png" alt="Foto MOH WINDY">
+                <h3>moh.windy agustin wahid</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN: 00743034983</P>
+                <p>Alamat:DSN.sumurgeneng,desa/kel.sumurgeneng,kec.jenu</p>
+            </div>
+            <div class="card">
+                <img src="NABIL FAQIH.png" alt="Foto Afdhal Ulum">
+                <h3>nabil faqih</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0084132774</P>
+                <p>Alamat:DS.CINGKLUNG KEC.BANCAR</p>
+            </div>
+            <div class="card">
+                <img src="NUR AINI.png" alt="Foto Ahmad Arif Muzaki">
+                <h3>nur aini</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0075460671</P>
+                <p>Alamat:Desa.margosuko kec.bancar</p>
+            </div>
+            <div class="card">
+                <img src="NUR AINI JANAH.png" alt="Foto Ahmad Fadli Nur Ibad">
+                <h3>nur aini roudlotul jannah</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0084943059</P>
+                <p>Alamat:Desa Glondonggede kec.tambakboyo</p>
+            </div>
+            <div class="card">
+                <img src="NUR ROCHMAWATI.png" alt="Foto Ahmad Risky Putra Indrawan">
+                <h3>nur rochmawati</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0081727636</P>
+                <p>Alamat:Desa.sotang kec.tambakboyo</p>
+            </div>
+            <div class="card">
+                <img src="NUR RIZKA CAHYANI.png" alt="Foto Ahmad Zaenal Prayogi">
+                <h3>nurul rizka cahyani</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0077274566</P>
+                <p>Alamat:Desa bogorejo Kec.bancar</p>
+            </div>
+            <div class="card">
+                <img src="PIPIT AYU NINGTIAS.png" alt="Foto Ahmad Zaeni">
+                <h3>pipit ayu ning tias</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0076675562</P>
+                <p>Alamat:Desa.mliwang kec.kerek</p>
+            </div>
+            <div class="card">
+                <img src="PRATAMA ADYTIA.png" alt="Foto Aldi Rahmaka">
+                <h3>pratama aditya salsabilla</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0081402062</P>
+                <p>Alamat:Desa socorejo kec jenu</p>
+            </div>
+            <div class="card">
+                <img src="PUUUUSPITA DWI AGSTIN.png" alt="">
+                <h3>puspita dwi agustin</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0084995059</P>
+                <p>Alamat:Desa gemulung kec.kerek</p>
+            </div>
+            <div class="card">
+                <img src="PUTRI AMELIA.png" alt="Foto Alfin Maulana">
+                <h3>putri amelia</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <P>NISN:0073724043</P>
+                <p>Alamat:Desa wolutengah kec.kerek</p>
+            </div>
+            <div class="card">
+                <img src="PUTRI DWI.png" alt="Foto Andik Saputro">
+                <h3>putri dwi agustin</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0084995059</p>
+                <p>Alamat:ds gemulung kec kerek</p>
+            </div>
+            <div class="card">
+                <img src="PUTRI NOVITA.png" alt="Foto Andika Adi Pratama">
+                <h3>putri novita</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0084872429</p>
+                <p>Alamat:Desa.karangrejo kec.bancar</p>
+            </div>
+            <div class="card">
+                <img src="PUTRI RAHAYU.png" alt="Foto Andika Ardi Anto">
+                <h3>putri rahayu</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0076179763</p>
+                <p>Alamat:Desa mbelikanget Kec.tambakboyo</p>
+            </div>
+            <div class="card">
+                <img src="RIFKA DWI.png" alt="Foto Ardian Dwi Nugroho">
+                <h3>rifka dwi novitasari</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0071545979</p>
+                <p>Alamat:Desa klutuk Kec.tambakboyo</p>
+          </div>
+           <div class="card">
+                    <img src="RIKKA ANGGI.png" alt="Foto Ardian Dwi Nugroho">
+                    <h3>rifka anggi shavina</h3>
+                    <p>Kelas: XI-TKJ2</p>
+                    <p>NISN:0073777163</p>
+                    <p>Alamat:Desa Gaji Kec.Kerek</p>        
+            </div>
+            <div class="card">
+                <img src="SASMITA ANGREANI.png" alt="Foto Bagus Candra">
+                <h3>sasmita angraeni</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0082748041</p>
+                <p>Alamat:Desa mentoso Kec.jenu</p>
+            </div>
+            <div class="card">
+                <img src="SEFIANA KRISTINAWATI.png" alt="Foto Bayu Aditya">
+                <h3>sefiana krisnawati</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0064199808<P>
+                <p>Alamat:Desa bulujowo Kec.bancar</p>
+            </div>
+            <div class="card">
+                <img src="SEKAR.png" alt="Foto Bima Dwi Putra">
+                <h3>sekar arum damayanti</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0086134940<P>
+                <p>Alamat:Desa merkawang kec.tambakboyo</p>
+            </div>
+            <div class="card">
+                <img src="SETYO BAGOS ADITYA.png" alt="Foto Dela Dwi Sari">
+                <h3>setyo bagos aditya</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0079795412<P>
+                <P>Alamat:Desa belikanget Kec.Tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="SHOIDATUL RIZKIYAH.png" alt="Foto Dimas Rian">
+                <h3>shoidatul rizkiyah</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0071442568<P>
+                <P>Alamat:Dusun sawir Kec.tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="SILVITA DINDA OKTA.png" alt="Foto Eko Prasetyo">
+                <h3>slvita dinda octia</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0084446445<P>
+                <P>Alamat:Desa karangrejo Kec.jenu</P>
+            </div>
+            <div class="card">
+                <img src="SRI AYU NINGSIH.png" alt="Foto Eko Rahman">
+                <h3>sri ayuningsih</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0082397584<p>
+                <P>Alamat:Desa mander Kec.Tambakboyo</P>
+            </div>
+            <div class="card">
+                <img src="SULIANA RISKA.png" alt="Foto Evan Reza">
+                <h3>suliana rissa ayu amelia</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0088934422<p>
+                <P>Alamat:Desa temaji Kec.Jenu</P>
+            </div>
+            <div class="card">
+                <img src="SUSANTI.png" alt="Foto Fandi">
+                <h3>susanti</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0085276794<P>
+                <P>Alamat:Desa klutuk Kec.tambakboyo</P>
+			</div>
+            <div class="card">
+                <img src="SYAHPUTRA.png" alt="Foto Fandi">
+                <h3>syahputra nurun fatiah</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0082175578<P>
+                <P>Alamat:Desa ngampelrejo Kec.Bancar</P>
+			</div>
+            <div class="card">
+                <img src="TITIK NUR AIFA.png" alt="Foto Fandi">
+                <h3>titik nur afifa</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0077745276<P>
+                <P>Alamat:Desa belikanget Kec.tambakboyo</P>	
+			</div>
+            <div class="card">
+                <img src="TITIN FARIHATUS.png" alt="Foto Fandi">
+                <h3>titin farihatus sholihah</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0077130298<P>
+                <P>Alamat:Desa klutuk Kec.tambakboyo</P>
+			</div>
+            <div class="card">
+                <img src="TRISTAN.png" alt="Foto Fandi">
+                <h3>tristan dealfayet</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0089249819</P>
+                <P>Alamat:Desa BuluJowo Kec.Bancar</P>	
+			</div>
+            <div class="card">
+                <img src="ZEDA EMANIA.png" alt="Foto Fandi">
+                <h3>zeda emania  rhomadani</h3>
+                <p>Kelas: XI-TKJ2</p>
+                <p>NISN:0072342207<P>
+                <P>Alamat:Desa BuluJowo Kec.Bancar</P>			
+            </div>
+          </div>
+
+        <div id="guruCards" class="card-container">
+            <div class="card">
+                <img src="bu restu.png" alt="Foto bu restu">
+                <h3>bu restu</h3>
+                <p>Jabatan: Guru Matematika</p>
+            </div>
+            <div class="card">
+                <img src="bu atik.png" alt="Foto Ainun Nisa">
+                <h3>bu atik </h3>
+                <p>Jabatan: Guru b6-tkj2</p>
+            </div>
+            <div class="card">
+                <img src="bu intan.png" alt="Foto Nuranisah">
+                <h3>Bu intan</h3>
+                <p>Jabatan: Guru b6-tkj</p>
+            </div>
+            <div class="card">
+                <img src="bu lala.png" alt="Foto Nuranisah">
+                <h3>bu lala</h3>
+                <p>Jabatan: Guru b6-tkj</p>
+            </div>
+            <div class="card">
+                <img src="bu novita.png" alt="Foto Nuranisah">
+                <h3>Bu novita</h3>
+                <p>Jabatan: Guru bk</p>
+            </div>
+            <div class="card">
+                <img src="bu ridha.png" alt="Foto Nuranisah">
+                <h3>Pak Khotibul Umam</h3>
+                <p>Jabatan: Guru bahasa jawa</p>
+            </div>
+            <div class="card">
+                <img src="bu yuli.png" alt="Foto Nuranisah">
+                <h3>Bu yuli</h3>
+                <p>Jabatan: Guru sejarah</p>
+            </div>
+            <div class="card">
+                <img src="pak adhim.png" alt="Foto Nuranisah">
+                <h3>pak adhim</h3>
+                <p>Jabatan: Guru penjas dan wali kelas tkj2</p>
+            </div>
+            <div class="card">
+                <img src="bu nurif.png" alt="Foto Nuranisah">
+                <h3>bu nurif</h3>
+                <p>Jabatan: Guru bahasa indonesia</p>
+            </div>
+            <div class="card">
+                <img src="bu muhim.png" alt="Foto Nuranisah">
+                <h3>bu nurif</h3>
+                <p>Jabatan: Guru bahasa inggris</p>    
+            </div>
+        </div>
+
+        <div id="piketCards" class="card-container">
+            <div class="card">
+                <h3>Senin</h3>
+                <p> pratama adytia</p>
+                <p>tristan dealfayet</p>
+                <p>nur aini</p>
+                <p>suliana rissa ayu</p>
+                <p>titik nur afifa</p>
+                <p>nur rochmawati</p>
+                <p>sefiana krisnawati</p>
+            </div>
+            <div class="card">
+                <h3>Selasa</h3>
+                <p>muhammad labib</p>
+                <p>nabil faqih</p>
+                <p>setiyo bagos aditya</p>
+                <p>sasmita anggraini</p>
+                <p>sekar arum</p>
+                <p>puspita dwi agustin</p>
+                <p>putri amelia</p>
+            </div>
+            <div class="card">
+                <h3>Rabu</h3>
+                <p> m.desta fernanda</p>
+                <p> stahputra rizky</p>
+                <p> riqa nrul amaliya</p>
+                <p> trista ayunda</p>
+                <p> zeda emania</p>
+                <P> silvita dinda octa</P>
+                <P> putri dwi murfianti</P>
+            </div>
+            <div class="card">
+                <h3>Kamis</h3>
+                <p> nurul rizka cahyani</p>
+                <p> mochamad sulthoni</p>
+                <p> m.w.agustin</p>
+                <p> nur azizah</p>
+                <p> shoidatul rizkiyah</p>
+                <p> sri ayu ningsih</p>
+                <p> rikka anggi shavina</p>
+           </div>
+           <div class="card">
+                <h3>Jumat</h3>
+                <p> putri rahayu</p>
+                <p> pipit ayu ningtias</p>
+                <p> nur aini roudlotul</p>
+                <p> putri novita</p>
+                <p> titin farihatus</p>
+                <p> rifka dwi novitasari</p>
+                <p> susanti</p>
+                <p> syarifatun nurun</p>
+           </div>
+        </div>
+
+        <div id="strukturCards" class="card-container">
+            <div class="card">
+                <h3>Wali Kelas</h3>
+                <p>Nama: pak adhim</p>
+                <h3>Ketua Kelas</h3>
+                <p>Nama: aini jr</p>
+                <h3>Wakil kelas</h3>
+                <p>Nama: zeda</p>
+            </div>
+                <div class="card">
+                <h3>Sekertaris 1</h3>
+                 <p>Nama: dinda</p>
+                <h3>sekertaris 2</h3>
+                 <p>nama:ayunda</p>
+                <h3>Bendahara 1</h3>
+                 <p>Nama: putri rahayu</p>
+                <h>Bendahara 2</h>
+                 <p>nama:putri amelia</p>
+
+
+            </div>
+         </div>
+
+        <div id="gallery" class="gallery">
+            <img src="keluarga tkj2.png" alt="Foto Kegiatan 1">
+        </div>
+
+        <div id="jadwalPelajaran" class="card-container">
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>Pelajaran</th>
+                   
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>b6-tkj</td>
+                    <td>b6-tkj</td>
+                    <td>b7-tkj</td>
+                    <td>b6-tkj</td>
+                </tr>
+                <tr>
+                    <td>selasa</td>
+                    <td>b7-tkj</td>
+                    <td>b8a-tkj</td>
+                    <td>matematika</td>
+                    <td>b.inggris</td>
+                </tr>
+                <tr>
+                    <td>rabu</td>
+                    <td>B6-tkj</td>
+                    <td>b.indonesia</td>
+                    <td>b.inggris</td>
+                    <td>pai</td>
+                </tr>
+                <tr>
+                    <td>kamis</td>
+                    <td>b6-tkj</td>
+                    <td>penjas</td>
+                    <td>b.jawa</td>
+                    <td>bk</td>
+                    <td>pkn</td>
+                    <td>sejarah</td>
+                </tr>
+                <tr>
+                    <td>jumat</td>
+                    <td>b6-tkj</td>
+                    <td>b7-tkj</td>
+        </div>
+    </div>
+</body>
+</html>
